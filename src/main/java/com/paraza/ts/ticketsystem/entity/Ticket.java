@@ -10,15 +10,12 @@ import java.util.UUID;
 public class Ticket {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
 
-    @GeneratedValue(generator="system-uuid")
-    @GenericGenerator(name="system-uuid", strategy = "uuid")
-    private UUID ticketid;
+    private UUID ticketId;
 
-    //@Column(name = "created_date")
-    private LocalDateTime datec;
+    private LocalDateTime createdDate;
 
     private Status status;
 
@@ -32,20 +29,20 @@ public class Ticket {
         this.id = id;
     }
 
-    public UUID getTicketid() {
-        return ticketid;
+    public UUID getTicketId() {
+        return ticketId;
     }
 
-    public void setTicketid(UUID ticketid) {
-        this.ticketid = ticketid;
+    public void setTicketId(UUID ticketId) {
+        this.ticketId = ticketId;
     }
 
-    public LocalDateTime getDatec() {
-        return datec;
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
     }
 
-    public void setDatec(LocalDateTime datec) {
-        this.datec = datec;
+    public void setCreatedDate(LocalDateTime datec) {
+        this.createdDate = datec;
     }
 
     public Status getStatus() {
